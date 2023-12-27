@@ -7,6 +7,9 @@
 [] Route for register page
 [] Customize login page
 [] Customize register page
-[] Customize home page
-[] Route for details page
-[] Route for Add/Edit page
+
+[] Customize home page (addnew button and link to addnew page, picture input)
+
+[] Route for details page(picture input, back button, delete button with route, edit button to link to edit page)
+
+[] Route for Add/Edit page, Customize page (Date and description input with an image input, add button that takes you back to the home page and displays new fish)
