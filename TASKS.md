@@ -2,10 +2,10 @@
 
 // TODO!
 
-[] Create database
+[x] Create database
 [] Route for login page
 [] Route for register page
-[] Customize login page
+[x] Customize login page
 [] Customize register page
 
 [] Customize home page (addnew button and link to addnew page, picture input)
