@@ -11,8 +11,8 @@ CREATE TABLE "user" (
 );
 
 CREATE TABLE "fishes" (
-  "id" integer [primary key],
-  "user_id" integer,
+  "id" SERIAL PRIMARY KEY,
+  "user_id" INT REFERENCES "user",
   "name" varchar,
   "location" varchar,
   "image_url" varchar,
@@ -21,3 +21,14 @@ CREATE TABLE "fishes" (
   "length" varchar,
   "weight" varchar
 );
+
+INSERT INTO "fishes" ("name", "location", "image_url", "desciption", "caught_at", "length", "weight")
+
+VALUES ('Freshwater Perch', 'Minnesota', 
+'https://www.in-depthoutdoors.com/wp-content/uploads/2018/02/IMG_2846.png', 
+'Popular as both food and sport fish, mainly spawn in the spring time.', 'Leech Lake', 
+'15 inches', '6 pounds');
+
+INSERT INTO "fishes" ("name", "location", "image_url", "description", "caught_at", "length", "weight")
+
+VALUES ('Barracuda', 'Atlantic Ocean', 'https://critter.science/wp-content/uploads/2020/12/gb1-1180x520.png', 'Large mouth with large sharp teeth, shark in slender form', '2023-07-04 03:00pm', '5 feet', '15 pounds');

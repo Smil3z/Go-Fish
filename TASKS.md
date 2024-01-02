@@ -2,14 +2,14 @@
 
 // TODO!
 
-[x] Create database
-[] Route for login page
-[] Route for register page
-[x] Customize login page
-[] Customize register page
-
-[] Customize home page (addnew button and link to addnew page, picture input)
-
-[] Route for details page(picture input, back button, delete button with route, edit button to link to edit page)
-
-[] Route for Add/Edit page, Customize page (Date and description input with an image input, add button that takes you back to the home page and displays new fish)
+[x] Create database (this is good - make sure to do both the CREATE TABLE and INSERT queries)
+[] Route for list of users data (missing)
+[] Route for detail view
+[] Front end to display list of user data
+[] Front end to display details
+[] Route for adding (post route)
+[] Form to add new data
+[] Route to delete
+[] Update front end to include ability to delete
+[] Route for edit
+[] Update form to support edit
