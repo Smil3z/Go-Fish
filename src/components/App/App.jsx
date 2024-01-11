@@ -14,8 +14,8 @@ import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import AboutPage from '../AboutPage/AboutPage';
-import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
+import HomePage from '../HomePage/HomePage';
+import DetailsPage from '../DetailsPage/DetailsPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
@@ -57,7 +57,7 @@ function App() {
             exact
             path="/user"
           >
-            <UserPage />
+            <HomePage />
           </ProtectedRoute>
 
           <ProtectedRoute
@@ -65,7 +65,7 @@ function App() {
             exact
             path="/info"
           >
-            <InfoPage />
+            <DetailsPage />
           </ProtectedRoute>
 
           <Route

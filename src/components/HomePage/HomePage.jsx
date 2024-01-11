@@ -3,15 +3,13 @@ import LogOutButton from '../LogOutButton/LogOutButton';
 import {useSelector} from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import axios from 'axios';
-import { useHistory } from 'react-router-dom';
 
-function UserPage() {
+
+function HomePage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
   const journal = useSelector(store => store.journal);
-  const history = useHistory();
 
   {/*const getJournal = () => {
     axios.get('/fishes').then((response) => {
@@ -60,4 +58,4 @@ function UserPage() {
 }
 
 // this allows us to use <App /> in index.js
-export default UserPage;
+export default HomePage;
