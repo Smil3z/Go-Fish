@@ -4,11 +4,11 @@
 
 [x] Create database (this is good - make sure to do both the CREATE TABLE and INSERT queries)
 [x] Route for list of users data (missing) !TODO (time , length, weight, location)
-[] Route for adding (post route)
+[x] Route for adding (post route)
 [] Form to add new data
 [] Route to delete
 [] Update front end to include ability to delete
-[] Route for detail view (title, image and description)
+[x] Route for detail view (title, image and description)
 [] Front end to display list of user data
 [] Front end to display details
 [] Route for edit

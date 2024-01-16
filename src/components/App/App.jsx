@@ -13,6 +13,7 @@ import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
+import AddFish from '../AddFish/AddFish';
 import AboutPage from '../AboutPage/AboutPage';
 import HomePage from '../HomePage/HomePage';
 import DetailsPage from '../DetailsPage/DetailsPage';
@@ -67,6 +68,10 @@ function App() {
           >
             <DetailsPage />
           </ProtectedRoute>
+
+          <Route path= "/edit/:id" exact>
+            <AddFish />
+          </Route>
 
           <Route
             exact

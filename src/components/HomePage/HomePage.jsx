@@ -50,10 +50,10 @@ function HomePage() {
               <h3>{journal.name}</h3>
               <h3>{journal.location}</h3>
               <img onClick={() => displayJournal(journal)} src={journal.image_url} />
-              <h3>{journal.description}</h3>
+              {/*<h3>{journal.description}</h3>
               <h3>{journal.caught_at}</h3>
               <h3>{journal.length}</h3>
-              <h3>{journal.weight}</h3>
+          <h3>{journal.weight}</h3>*/}
             </div>
           )
         })}
