@@ -3,6 +3,7 @@ import LogOutButton from '../LogOutButton/LogOutButton';
 import {useSelector} from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 
 function HomePage() {
@@ -10,6 +11,7 @@ function HomePage() {
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
   const journal = useSelector(store => store.journal);
+  const history = useHistory();
 
   {/*const getJournal = () => {
     axios.get('/fishes').then((response) => {
@@ -20,6 +22,11 @@ function HomePage() {
       alert('Something went wrong')
     })
   }*/}
+  const displayJournal =(journalToDisplay) => {
+    console.log(journalToDisplay);
+    dispatch({type: 'SET_JOURNAL_DETAILS', payload: journalToDisplay})
+    history.push(`/details/${journalToDisplay.id}`)
+  }
 
   useEffect(() => {
     dispatch({ type: 'FETCH_JOURNAL'})
@@ -42,7 +49,7 @@ function HomePage() {
             <div key={journal.id}>
               <h3>{journal.name}</h3>
               <h3>{journal.location}</h3>
-              <img src={journal.image_url} />
+              <img onClick={() => displayJournal(journal)} src={journal.image_url} />
               <h3>{journal.description}</h3>
               <h3>{journal.caught_at}</h3>
               <h3>{journal.length}</h3>
