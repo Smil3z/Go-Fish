@@ -17,18 +17,18 @@ import { CardActionArea } from '@mui/material';
 
 function DetailsPage() {
   const details = useSelector(store => store.details);
-  const { journalId } = useParams();
+  const { id } = useParams();
   const dispatch = useDispatch();
   
   {/*const dispatch = useDispatch();*/}
 
   useEffect(() => {
-    dispatch({ type: 'FETCH_DETAILS', payload: journalId});
-  }, [journalId])
+    dispatch({ type: 'FETCH_DETAILS', payload: id});
+  }, [id])
 
     return ( 
       <div>
-        <h1>{journalId}</h1>
+        <h1>{id}</h1>
         <h3>{details.description}</h3>
         <p>{details.caught_at}</p>
         <p>{details.length}</p>
