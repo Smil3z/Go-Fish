@@ -6,7 +6,7 @@ function* fetchJournalDetails(action) {
     const details = yield axios.get(`/api/details/${action.payload}`);
     yield put ({type:'SET_DETAILS', payload: details.data});
     } catch(error) {
-      console.log('error with details saga', error);
+      console.log('error with adding saga', error);
     }
   }
 
