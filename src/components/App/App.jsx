@@ -70,6 +70,10 @@ function App() {
           </ProtectedRoute>
 
           <Route path= "/edit/:id" exact>
+            
+          </Route>
+
+          <Route exact path= "/add">
             <AddFish />
           </Route>
 

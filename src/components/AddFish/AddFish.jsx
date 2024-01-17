@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function AddFish() {
-    const edit = useSelector( store => store.edit );
+    const add = useSelector( store => store.add );
     {/*const [name, setName] = useState('');
     const [location, setLocation] = useState('');
     const [imageUrl, setImageUrl] = useState('');
@@ -22,8 +22,14 @@ function AddFish() {
     }*/}
 
     useEffect(() => {
-        dispatch({ type: 'FETCH_DETAILS', payload: id});
+        dispatch({ type: 'FETCH_ADD', payload: id});
     },[]);
+
+    return (
+        <>
+            <h2>Add Fish</h2>
+        </>
+    );
 }
 
 export default AddFish;

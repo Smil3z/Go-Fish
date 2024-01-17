@@ -30,6 +30,7 @@ function DetailsPage() {
         <p>{details.length}</p>
         <p>{details.weight}</p>
         <Link to= {`/edit/${id}`}> Edit </Link>
+        <Link to= {`/add`}> Add </Link>
       </div>
     );
       {/*<>
