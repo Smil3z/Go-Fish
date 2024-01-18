@@ -22,7 +22,7 @@ function HomePage() {
       alert('Something went wrong')
     })
   }*/}
-  const displayJournal =(journalToDisplay) => {
+  const displayJournal = (journalToDisplay) => {
     console.log(journalToDisplay);
     dispatch({type: 'SET_JOURNAL_DETAILS', payload: journalToDisplay})
     history.push(`/details/${journalToDisplay.id}`)

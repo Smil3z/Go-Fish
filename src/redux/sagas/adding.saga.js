@@ -1,18 +1,16 @@
 import { takeLatest, put } from "redux-saga/effects";
 import axios from "axios";
 
-function* fetchAddingFish(action) {
+function* sendFishToServer(action) {
     try {
-        const add = yield axios.get(`/api/adding/${action.payload}`);
-        console.log(' Adding all fields:', add.data);
-        yield put({ type: 'SET_ADD', payload: add.data});
+        yield axios.post(`/api/adding`, action.payload);
     } catch (error) {
         console.log('error in fetchJournal function', error);
     }
 }
 
 function* addSaga() {
-    yield takeLatest('FETCH_ADD',fetchAddingFish);
+    yield takeLatest('SEND_FISH_TO_SERVER',sendFishToServer);
 }
 
 export default addSaga;
