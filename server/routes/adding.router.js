@@ -3,8 +3,8 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 router.post('/', (req, res) => {
-    console.log('POST ne fish:', req.body);
-    
+    console.log('POST new fish:', req.body);
+
     if (req.isAuthenticated()) {
         const addFishQuery = `
             INSERT INTO "fishes" ("name", "location", "image_url", "description", "caught_at", "length", "weight", "user_id")

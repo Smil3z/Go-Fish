@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
+import { useHistory } from 'react-router-dom';
 
 
 // This is one of our simplest components
@@ -15,9 +17,14 @@ function DetailsPage() {
   const details = useSelector(store => store.details);
   const { id } = useParams();
   const dispatch = useDispatch();
+  const history = useHistory();
   
   {/*const dispatch = useDispatch();*/}
-
+  const deleteFish = (id) => {
+    dispatch({ type: 'DELETE_FISH', payload: id})
+    console.log('deleting fish', id);
+    history.push('/home');
+  }
   useEffect(() => {
     dispatch({ type: 'FETCH_DETAILS', payload: id});
   }, [id])
@@ -31,6 +38,8 @@ function DetailsPage() {
         <p>{details.weight}</p>
         <Link to= {`/edit/${id}`}> Edit </Link>
         <Link to= {`/add`}> Add </Link>
+        <Button varient="outlined" color="error" onClick={() => deleteFish(details.id)}>Delete</Button>
+        <br />
       </div>
     );
       {/*<>

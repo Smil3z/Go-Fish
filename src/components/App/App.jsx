@@ -20,6 +20,7 @@ import DetailsPage from '../DetailsPage/DetailsPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import EditFish from '../EditFish/EditFish';
 
 import './App.css';
 
@@ -69,8 +70,8 @@ function App() {
             <DetailsPage />
           </ProtectedRoute>
 
-          <Route path= "/edit/:id" exact>
-            
+          <Route exact path= "/edit:id">
+            <EditFish />
           </Route>
 
           <Route exact path= "/add">

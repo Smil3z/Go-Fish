@@ -11,8 +11,7 @@ router.put('/:id', (req, res) => {
             const updateFishQuery = `
                 UPDATE "fishes"
                 SET "name" = $1, "location" = $2, "image_url" = $3, "description" = $4, "caught_at" = $5, "length" = $6, "weight" = $7
-                WHERE "id" = $8 AND "user_id" = $9
-                RETURNING *;
+                WHERE "user_id" = $8
             `;
             const updateFishValues = [
                 req.body.name,
@@ -22,7 +21,6 @@ router.put('/:id', (req, res) => {
                 req.body.caught_at,
                 req.body.length,
                 req.body.weight,
-                fishId,
                 req.user.id
             ];
 
