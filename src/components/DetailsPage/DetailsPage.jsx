@@ -23,6 +23,7 @@ function DetailsPage() {
   const deleteFish = (id) => {
     dispatch({ type: 'DELETE_FISH', payload: id})
     console.log('deleting fish', id);
+    history.push('/home');
   }
   const edit = (id) => {
     console.log(details.id)
