@@ -14,9 +14,9 @@ router.post('/', (req, res) => {
         const addFishValues = [
             req.body.name,
             req.body.location,
-            req.body.image_url,
+            req.body.imageUrl,
             req.body.description,
-            req.body.caught_at,
+            req.body.caughtAt,
             req.body.length,
             req.body.weight,
             req.user.id

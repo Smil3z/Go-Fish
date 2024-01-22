@@ -70,7 +70,7 @@ function App() {
             <DetailsPage />
           </ProtectedRoute>
 
-          <Route exact path= "/edit:id">
+          <Route exact path= "/edit/:id">
             <EditFish />
           </Route>
 

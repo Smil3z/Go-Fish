@@ -3,15 +3,15 @@ import axios from "axios";
 
 function* fetchEditingDetails(action) {
     try{
-    const edit = yield axios.get(`/api/editing/${action.payload}`);
-    yield put ({type:'SET_EDIT', payload: edit.data});
+    yield axios.put(`/api/edit/${action.payload.id}`, action.payload);
+    yield put ({type:'FETCH_DETAILS', payload: action.payload.id});
     } catch(error) {
       console.log('error with details saga', error);
     }
   }
 
 function* editSaga() {
-    yield takeLatest('FETCH_EDIT', fetchEditingDetails);
+    yield takeLatest('EDIT_DETAILS', fetchEditingDetails);
 }
 
 export default editSaga;

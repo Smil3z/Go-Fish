@@ -23,8 +23,12 @@ function DetailsPage() {
   const deleteFish = (id) => {
     dispatch({ type: 'DELETE_FISH', payload: id})
     console.log('deleting fish', id);
-    history.push('/home');
   }
+  const edit = (id) => {
+    console.log(details.id)
+    history.push(`/edit/${details.id}`)
+  }
+
   useEffect(() => {
     dispatch({ type: 'FETCH_DETAILS', payload: id});
   }, [id])
@@ -36,7 +40,7 @@ function DetailsPage() {
         <p>{details.caught_at}</p>
         <p>{details.length}</p>
         <p>{details.weight}</p>
-        <Link to= {`/edit/${id}`}> Edit </Link>
+        <Button onClick={edit} type="submit" variant="contained"> edit </Button>
         <Link to= {`/add`}> Add </Link>
         <Button varient="outlined" color="error" onClick={() => deleteFish(details.id)}>Delete</Button>
         <br />

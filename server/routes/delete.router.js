@@ -4,6 +4,7 @@ const pool = require('../modules/pool.js');
 
 router.delete('/:id', (req, res) => {
     if(req.isAuthenticated()) {
+      console.log('deleting fish');
       let queryText = `DELETE FROM "fishes" WHERE "id" = $1 AND "user_id" = $2;`;
       pool.query(queryText, [req.params.id, req.user.id])
       .then((result) => {
