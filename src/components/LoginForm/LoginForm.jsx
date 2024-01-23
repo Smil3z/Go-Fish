@@ -48,6 +48,7 @@ function LoginForm() {
           </Typography>
           <Box component="form" onSubmit={login} noValidate sx={{ mt: 1 }}>
             <TextField 
+              variant='filled'
               margin="normal" 
               requried 
               fullWidth 
@@ -58,9 +59,10 @@ function LoginForm() {
               autoFocus
               value={username}
               onChange={(event) => setUsername(event.target.value)}
-              InputProps={{ sx: { color: 'black', backgroundColor: 'white' } }}
+              InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
             />
             <TextField
+              variant='filled'
               margin="normal"
               required
               fullWidth
@@ -71,7 +73,7 @@ function LoginForm() {
               autoComplete="current-password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-              InputProps={{ sx: { color: 'black', backgroundColor: 'white' } }}
+              InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
             />
             <Button
               type="submit"

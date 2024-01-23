@@ -92,12 +92,20 @@ function AddFish() {
                         setName(event.target.value)} 
                         label="Name" 
                         id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }}
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        variant='filled'
+                        required
+                        fullWidth
                     />
                     <br />
                     <TextField value={location} onChange={(event) => 
                         setLocation(event.target.value)} 
                         label="Location" 
+                        variant='filled'
                         id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }}
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        fullWidth
                     />
                     <br />
                     <TextField onChange={onFileChange} 
@@ -106,6 +114,10 @@ function AddFish() {
                         //label="Image url" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        variant='filled'
+                        fullWidth
                     />
                     <p>{imageUrl}</p>
                     <br />
@@ -113,7 +125,11 @@ function AddFish() {
                         setDescription(event.target.value)} 
                         label="Description" 
                         id="outlined-start-adornment" 
+                        variant='filled'
                         sx={{ m: 1, width: '25ch' }}
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        fullWidth
                     />
                     <br />
                     <TextField value={caughtAt} onChange={(event) => 
@@ -121,6 +137,10 @@ function AddFish() {
                         label="Caught at" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        variant='filled'
+                        fullWidth
                     />
                     <br />
                     <TextField value={length} onChange={(event) => 
@@ -128,13 +148,21 @@ function AddFish() {
                         label="Length" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        fullWidth
+                        variant='filled'
                     />
                     <br />
                     <TextField value={weight} onChange={(event) => 
                         setWeight(event.target.value)} 
                         label="Weight" 
                         id="outlined-start-adornment" 
+                        variant='filled'
                         sx={{ m: 1, width: '25ch' }}
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        fullWidth
                     />
                     <br />
                     <br />

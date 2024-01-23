@@ -7,6 +7,13 @@ import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 import { useHistory } from 'react-router-dom';
 import Details from './Details.css';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
 
 
@@ -32,6 +39,15 @@ function DetailsPage() {
     history.push(`/edit/${details.id}`)
   }
 
+  const add = (id) => {
+    history.push('/add')
+  }
+
+  const getDate = (dateString) => {
+    let formattedDate = new Date(dateString);
+    return formattedDate.toLocaleDateString();
+  }
+
   useEffect(() => {
     dispatch({ type: 'FETCH_DETAILS', payload: id});
   }, [id])
@@ -39,12 +55,23 @@ function DetailsPage() {
     return ( 
       <div>
         <h3>{details.description}</h3>
-        <p>{details.caught_at}</p>
-        <p>{details.length}</p>
-        <p>{details.weight}</p>
-        <Button onClick={edit} type="submit" variant="contained"> edit </Button>
-        <Link to= {`/add`}> Add </Link>
-        <Button varient="outlined" color="error" onClick={() => deleteFish(details.id)}>Delete</Button>
+        <ul>
+          <li>
+            <p>{getDate(details.caught_at)}</p>
+          </li>
+          <li>
+            <p>{details.length}</p>
+          </li>
+          <li>
+          <p>{details.weight}</p>
+          </li>
+        </ul>
+        <section>
+          <Button onClick={edit} type="submit" variant="contained"> edit </Button>
+          {/*<Link to= {`/add`}> Add </Link>*/}
+          <Button onClick={add} type="submit" variant="contained"> Add </Button>
+          <Button varient="outlined" color="error" variant="contained" onClick={() => deleteFish(details.id)}>Delete</Button>
+        </section>
         <br />
       </div>
     );

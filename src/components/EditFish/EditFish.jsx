@@ -91,12 +91,20 @@ function EditFish() {
                         setName(event.target.value)} 
                         label="Name" 
                         id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }}
+                        variant='filled'
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        fullWidth
                     />
                     <br />
                     <TextField value={location} onChange={(event) => 
                         setLocation(event.target.value)} 
                         label="Location" 
                         id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }}
+                        variant='filled'
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        fullWidth
                     />
                     <br />
                     <TextField value={imageUrl} onChange={(event) => 
@@ -104,6 +112,10 @@ function EditFish() {
                         label="Image url" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
+                        variant='filled'
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        fullWidth
                     />
                     <br />
                     <TextField value={description} onChange={(event) => 
@@ -111,6 +123,10 @@ function EditFish() {
                         label="Description" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
+                        variant='filled'
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        fullWidth
                     />
                     <br />
                     <TextField value={caughtAt} onChange={(event) => 
@@ -118,6 +134,10 @@ function EditFish() {
                         label="Caught at" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
+                        variant='filled'
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        fullWidth
                     />
                     <br />
                     <TextField value={length} onChange={(event) => 
@@ -125,6 +145,10 @@ function EditFish() {
                         label="Length" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
+                        variant='filled'
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        fullWidth
                     />
                     <br />
                     <TextField value={weight} onChange={(event) => 
@@ -132,6 +156,10 @@ function EditFish() {
                         label="Weight" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
+                        variant='filled'
+                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        required
+                        fullWidth
                     />
                     <br />
                     <br />
