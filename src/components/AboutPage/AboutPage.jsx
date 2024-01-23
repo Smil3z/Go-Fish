@@ -26,18 +26,15 @@ function AboutPage() {
           <li>Material UI</li>
         </ul>
       </div>
-        <h3>Thanks</h3>
-        <ul>
-          <li> Thanks to my family & friends </li>
-        </ul>
-          <p>
-            , 
-            my instructors and mentors, 
-            Special thanks to our amazing instructor, Chris Black, for all that he's done for us!!
-            Prime Digital Academy, 
-            My wonderful Cohort,
-            And my dog Cookie for reminding me to take breaks!
-          </p>
+      <h3>Thanks</h3>
+      <ul>
+        <li> Thanks to my family & friends </li>
+        <li> my instructors and mentors </li>
+        <li> Prime Digital Academy </li>
+        <li> Special thanks to our amazing instructor, Chris Black, for all that he's done for us!! </li>
+        <li> My wonderful Cohort </li>
+        <li> And my dog Cookie for reminding me to take breaks! </li>
+      </ul>
     </div>
   );
 }

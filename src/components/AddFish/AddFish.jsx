@@ -14,6 +14,7 @@ import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import axios from 'axios';
+import './AddFish.css';
 
 function AddFish() {
     // const add = useSelector( store => store.add );
@@ -84,15 +85,15 @@ function AddFish() {
 
     return (
         <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-            <FormControl onSubmit={addNewFish}>
-                <div>
-                    <h2> Add Fish</h2>
+            <FormControl onSubmit={addNewFish} >
+                <h2> Add Fish</h2>
+                <div className='inputs' >
                     <br />
                     <TextField value={name} onChange={(event) => 
                         setName(event.target.value)} 
                         label="Name" 
                         id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }}
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         variant='filled'
                         required
                         fullWidth
@@ -103,7 +104,7 @@ function AddFish() {
                         label="Location" 
                         variant='filled'
                         id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }}
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         fullWidth
                     />
@@ -114,7 +115,7 @@ function AddFish() {
                         //label="Image url" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         variant='filled'
                         fullWidth
@@ -127,7 +128,7 @@ function AddFish() {
                         id="outlined-start-adornment" 
                         variant='filled'
                         sx={{ m: 1, width: '25ch' }}
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         fullWidth
                     />
@@ -137,7 +138,7 @@ function AddFish() {
                         label="Caught at" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         variant='filled'
                         fullWidth
@@ -148,7 +149,7 @@ function AddFish() {
                         label="Length" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         fullWidth
                         variant='filled'
@@ -160,7 +161,7 @@ function AddFish() {
                         id="outlined-start-adornment" 
                         variant='filled'
                         sx={{ m: 1, width: '25ch' }}
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         fullWidth
                     />

@@ -14,6 +14,7 @@ import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import axios from 'axios'
+import './EditFish.css';
 
 
 
@@ -52,7 +53,7 @@ function EditFish() {
                 setLocation(edit.location);
                 setImageUrl(edit.image_url);
                 setDescription(edit.description);
-                setCaughtAt(edit.caught_at);
+                setCaughtAt(getDate(edit.caught_at));
                 setLength(edit.length);
                 setWeight(edit.weight)
             }).catch (error =>{
@@ -79,20 +80,24 @@ function EditFish() {
     }, [id]);
     
 
+    const getDate = (dateString) => {
+        let formattedDate = new Date(dateString);
+        return formattedDate.toLocaleDateString();
+    }
 
     return (
 
         <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
             <FormControl onSubmit={editFish}>
-                <div>
-                    <h2> Edit Fish</h2>
+                <h2> Edit Fish</h2>
+                <div className='inputs'>
                     <br />
                     <TextField value={name} onChange={(event) => 
                         setName(event.target.value)} 
                         label="Name" 
                         id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }}
                         variant='filled'
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         fullWidth
                     />
@@ -102,7 +107,7 @@ function EditFish() {
                         label="Location" 
                         id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }}
                         variant='filled'
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         fullWidth
                     />
@@ -113,7 +118,7 @@ function EditFish() {
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
                         variant='filled'
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         fullWidth
                     />
@@ -124,7 +129,7 @@ function EditFish() {
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
                         variant='filled'
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         fullWidth
                     />
@@ -135,7 +140,7 @@ function EditFish() {
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
                         variant='filled'
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         fullWidth
                     />
@@ -146,7 +151,7 @@ function EditFish() {
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
                         variant='filled'
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         fullWidth
                     />
@@ -157,7 +162,7 @@ function EditFish() {
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
                         variant='filled'
-                        InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+                        InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
                         fullWidth
                     />
