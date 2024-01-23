@@ -6,6 +6,8 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 import { useHistory } from 'react-router-dom';
+import Details from './Details.css';
+
 
 
 // This is one of our simplest components
@@ -36,7 +38,6 @@ function DetailsPage() {
 
     return ( 
       <div>
-        <h1>{id}</h1>
         <h3>{details.description}</h3>
         <p>{details.caught_at}</p>
         <p>{details.length}</p>

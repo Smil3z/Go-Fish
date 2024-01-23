@@ -7,9 +7,9 @@
 [x] Route for adding (post route)
 [x] Form to add new data (and a POST route.)
 [x] Route to delete
-[] Update front end to include ability to delete
+[x] Update front end to include ability to delete
 [x] Route for detail view (title, image and description)
-[] Front end to display list of user data
-[] Front end to display details
+[x] Front end to display list of user data
+[x] Front end to display details
 [x] Route for edit
-[] Update form to support edit
+[x] Update form to support edit

@@ -1,15 +1,15 @@
 import React from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+import './HomePage.css';
 
 
 function HomePage() {
@@ -30,12 +30,12 @@ function HomePage() {
   }*/}
   const displayJournal = (journalToDisplay) => {
     console.log(journalToDisplay);
-    dispatch({type: 'SET_JOURNAL_DETAILS', payload: journalToDisplay})
+    dispatch({ type: 'SET_JOURNAL_DETAILS', payload: journalToDisplay })
     history.push(`/details/${journalToDisplay.id}`)
   }
 
   useEffect(() => {
-    dispatch({ type: 'FETCH_JOURNAL'})
+    dispatch({ type: 'FETCH_JOURNAL' })
   }, []);
 
   {/*useEffect(() => {
@@ -44,56 +44,48 @@ function HomePage() {
 
   return (
 
-    
-    <div className="container">
+
+    <div className="container" style={{ display: 'grid', flexWrap: 'wrap', gap: '20px' }}>
       <h2>Welcome, {user.username}!</h2>
-      <p>Your ID is: {user.id}</p>
+      {/*<p>Your ID is: {user.id}</p>*/}
       {/*<ul>
           {getJournal.map}
       </ul>*/}
-      <section className='journal'>
-        {journal.map(journal => {
-          return (
-            <div key={journal.id}>
-              <h3>{journal.name}</h3>
-              <h3>{journal.location}</h3>
-              <img onClick={() => displayJournal(journal)} src={journal.image_url} />
+
+      {journal.map(journal => {
+        return (
+          <Card sx={{ maxWidth: 345, backgroundColor:'lightblue', borderWidth: '4px', borderStyle: 'solid', borderColor: 'blue'}} variant='outlined' key={journal.id}>
+            <CardActionArea className='card' key={journal.id} onClick={() => displayJournal(journal)}>
+              <CardMedia
+                component="img"
+                height="140"
+                src={journal.image_url}
+              />
+              <CardContent orientation='vertical' variant='soft'>
+                <Typography gutterBottom variant="h5" component="div" >
+                  {journal.name}
+                </Typography>
+                <Typography className='gutter' variant="h8" >
+                  {journal.location}
+                </Typography>
+              </CardContent>
+              {/*<h3>{journal.location}</h3>*/}
+              {/*<img onClick={() => displayJournal(journal)} src={journal.image_url} />*/}
               {/*<h3>{journal.description}</h3>
-              <h3>{journal.caught_at}</h3>
-              <h3>{journal.length}</h3>
-          <h3>{journal.weight}</h3>*/}
-            </div>
-          )
-        })}
-      </section>
-    
+                  <h3>{journal.caught_at}</h3>
+                  <h3>{journal.length}</h3>
+                  <h3>{journal.weight}</h3>*/}
+            </CardActionArea>
+          </Card>
+        )
+      })}
+
+      <br />
       <LogOutButton className="btn" />
-
-      {/*<Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-      </Card>*/}
-
     </div>
-    
 
-    
+
+
   );
 }
 
