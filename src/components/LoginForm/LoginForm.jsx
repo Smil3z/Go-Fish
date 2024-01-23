@@ -43,7 +43,7 @@ function LoginForm() {
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box sx={{ marginTop: 8, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          <Typography component="h1" variant="h5">
+          <Typography sx={{ color: 'white' }} component="h1" variant="h5">
             Sign In
           </Typography>
           <Box component="form" onSubmit={login} noValidate sx={{ mt: 1 }}>
@@ -58,6 +58,7 @@ function LoginForm() {
               autoFocus
               value={username}
               onChange={(event) => setUsername(event.target.value)}
+              InputProps={{ sx: { color: 'black', backgroundColor: 'white' } }}
             />
             <TextField
               margin="normal"
@@ -70,6 +71,7 @@ function LoginForm() {
               autoComplete="current-password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
+              InputProps={{ sx: { color: 'black', backgroundColor: 'white' } }}
             />
             <Button
               type="submit"
