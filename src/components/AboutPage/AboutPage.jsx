@@ -24,6 +24,7 @@ function AboutPage() {
           <li>Express</li>
           <li>PostgreSQL</li>
           <li>Material UI</li>
+          <li>Cloudinary</li>
         </ul>
       </div>
       <h3>Thanks</h3>
