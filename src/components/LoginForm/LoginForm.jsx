@@ -59,7 +59,7 @@ function LoginForm() {
               autoFocus
               value={username}
               onChange={(event) => setUsername(event.target.value)}
-              InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+              InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
             />
             <TextField
               variant='filled'
@@ -73,7 +73,7 @@ function LoginForm() {
               autoComplete="current-password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-              InputProps={{ sx: { color: 'white', backgroundColor: 'white' } }}
+              InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
             />
             <Button
               type="submit"
