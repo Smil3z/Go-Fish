@@ -13,6 +13,19 @@ Tired of catching no fish, let alone bogus fish? Well have no fear , your boy St
 ![app](./public/Screenshot%202024-01-24%20at%201.11.34%20PM.png)
 ![app](./public/Screenshot%202024-01-24%20at%201.11.47%20PM.png)
 
+### Tasks taken to build this project
+
+- [x] Create database (this is good - make sure to do both the CREATE TABLE and INSERT queries)
+- [x] Route for list of users data (missing) !TODO (time , length, weight, location)
+- [x] Route for adding (post route)
+- [x] Form to add new data (and a POST route.)
+- [x] Route to delete
+- [x] Update front end to include ability to delete
+- [x] Route for detail view (title, image and description)
+- [x] Front end to display list of user data
+- [x] Front end to display details
+- [x] Route for edit
+- [x] Update form to support edit
 
 
 ### Technologies used:
@@ -29,24 +42,6 @@ Tired of catching no fish, let alone bogus fish? Well have no fear , your boy St
 * Material UI
 * Cloudinary
 
-### Tasks taken to build this project
-
-- [x] Create database (this is good - make sure to do both the CREATE TABLE and INSERT queries)
-- [x] Route for list of users data (missing) !TODO (time , length, weight, location)
-- [x] Route for adding (post route)
-- [x] Form to add new data (and a POST route.)
-- [x] Route to delete
-- [x] Update front end to include ability to delete
-- [x] Route for detail view (title, image and description)
-- [x] Front end to display list of user data
-- [x] Front end to display details
-- [x] Route for edit
-- [x] Update form to support edit
-
-## Authors
-
-* **Stephon** - [Go Fish!](https://github.com/Smil3z/Go-Fish)
-
 ## Acknowledgments
 
 * Thanks to my family & friends
@@ -55,3 +50,7 @@ Tired of catching no fish, let alone bogus fish? Well have no fear , your boy St
 * Special thanks to our amazing instructor, Chris Black, for all that he's done for us!!
 * My wonderful Cohort
 * And my dog Cookie for reminding me to take breaks!
+
+## Authors
+
+* **Stephon** - [Go Fish!](https://github.com/Smil3z/Go-Fish)
