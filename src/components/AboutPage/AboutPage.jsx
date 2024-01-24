@@ -27,15 +27,22 @@ function AboutPage() {
           <li>Cloudinary</li>
         </ul>
       </div>
-      <h3>Thanks</h3>
-      <ul>
-        <li> Thanks to my family & friends </li>
-        <li> my instructors and mentors </li>
-        <li> Prime Digital Academy </li>
-        <li> Special thanks to our amazing instructor, Chris Black, for all that he's done for us!! </li>
-        <li> My wonderful Cohort </li>
-        <li> And my dog Cookie for reminding me to take breaks! </li>
-      </ul>
+      <div>
+        <h3>Thanks</h3>
+        <ul>
+          <li> Thanks to my family & friends </li>
+          <li> my instructors and mentors </li>
+          <li> Prime Digital Academy </li>
+          <li> Special thanks to our amazing instructor, Chris Black, for all that he's done for us!! </li>
+          <li> My wonderful Cohort </li>
+          <li> And my dog Cookie for reminding me to take breaks! </li>
+        </ul>
+      </div>
+      <div className='socials'>
+        <h3>Where to find me</h3>
+        <h4>GitHub: <a href="https://github.com/Smil3z"> Stephon Tonge</a></h4>
+        <h4>LinkedIn: <a href="https://www.linkedin.com/in/stephontonge/"> Stephon Tonge</a></h4>
+      </div>
     </div>
   );
 }

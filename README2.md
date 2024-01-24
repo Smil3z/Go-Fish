@@ -1,87 +1,55 @@
-# Project Title
+# Go Fish!
 
-One Paragraph of project description goes here
+Overview:
 
-## Getting Started
+Tired of catching no fish, let alone bogus fish? Well have no fear , your boy Stephon is here. I would like to introduce you guys to my new app called “Go Fish!”. This app is designed to give the user journal and tracking capabilities when it comes to catching the species of fish around the area. The user will also be able to add a description of their fish as well as take a picture of it as well. Also, the user will have a history of past fish caught and the option to edit or delete the current fish entry.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## ScreenShots
 
-### Prerequisites
+![Alt text](<public/Screenshot 2024-01-24 at 1.10.15 PM.png>)
+![Alt text](<public/Screenshot 2024-01-24 at 1.10.32 PM.png>)
+![Alt text](<public/Screenshot 2024-01-24 at 1.10.51 PM.png>) 
+![Alt text](<public/Screenshot 2024-01-24 at 1.11.19 PM.png>) 
+![Alt text](<public/Screenshot 2024-01-24 at 1.11.34 PM.png>) 
+![Alt text](<public/Screenshot 2024-01-24 at 1.11.47 PM.png>)
 
-What things you need to install the software and how to install them
+### Technologies used:
 
-```
-Give examples
-```
+* HTML
+* CSS
+* Javascript
+* React
+* Redux
+* Sagas
+* Node.js
+* Express
+* PostgreSQL
+* Material UI
+* Cloudinary
 
-### Installing
+### Tasks taken to build this project
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+- [x] Create database (this is good - make sure to do both the CREATE TABLE and INSERT queries)
+- [x] Route for list of users data (missing) !TODO (time , length, weight, location)
+- [x] Route for adding (post route)
+- [x] Form to add new data (and a POST route.)
+- [x] Route to delete
+- [x] Update front end to include ability to delete
+- [x] Route for detail view (title, image and description)
+- [x] Front end to display list of user data
+- [x] Front end to display details
+- [x] Route for edit
+- [x] Update form to support edit
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **Stephon** - *Initial work* - [Go Fish!](https://github.com/Smil3z/Go-Fish)
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thanks to my family & friends
+* my instructors and mentors
+* Prime Digital Academy
+* Special thanks to our amazing instructor, Chris Black, for all that he's done for us!!
+* My wonderful Cohort
+* And my dog Cookie for reminding me to take breaks!
