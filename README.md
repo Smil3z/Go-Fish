@@ -54,4 +54,4 @@ Tired of catching no fish, let alone bogus fish? Well have no fear , your boy St
 
 ## Authors
 
-* **Stephon** - [Go Fish!](https://github.com/Smil3z/Go-Fish)
+* **Stephon Tonge** - [Go Fish!](https://github.com/Smil3z/Go-Fish)
