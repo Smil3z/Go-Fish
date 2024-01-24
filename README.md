@@ -6,7 +6,8 @@ Tired of catching no fish, let alone bogus fish? Well have no fear , your boy St
 
 ## ScreenShots
 
-![app](./public/Screenshot%202024-01-24%20at%201.10.15%20PM.png)
+
+![App Screenshot](https://github.com/Smil3z/Go-Fish/blob/main/screenshots/Screenshot%202024-01-24%20at%201.10.15%E2%80%AFPM.png?raw=true)
 ![app](./public/Screenshot%202024-01-24%20at%201.10.32%20PM.png)
 ![app](./public/Screenshot%202024-01-24%20at%201.10.51%20PM.png)
 ![app](./public/Screenshot%202024-01-24%20at%201.11.19%20PM.png)
