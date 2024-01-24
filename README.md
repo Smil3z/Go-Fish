@@ -6,12 +6,12 @@ Tired of catching no fish, let alone bogus fish? Well have no fear , your boy St
 
 ## ScreenShots
 
-![Alt text](<./public/Screenshot 2024-01-24 at 1.10.15 PM.png>)
-![Alt text](<./public/Screenshot 2024-01-24 at 1.10.32 PM.png>)
-![Alt text](<./public/Screenshot 2024-01-24 at 1.10.51 PM.png>) 
-![Alt text](<./public/Screenshot 2024-01-24 at 1.11.19 PM.png>) 
-![Alt text](<./public/Screenshot 2024-01-24 at 1.11.34 PM.png>) 
-![Alt text](<./public/Screenshot 2024-01-24 at 1.11.47 PM.png>)
+![app](./public/Screenshot%202024-01-24%20at%201.10.15%20PM.png)
+![app](./public/Screenshot%202024-01-24%20at%201.10.32%20PM.png)
+![app](./public/Screenshot%202024-01-24%20at%201.10.51%20PM.png)
+![app](./public/Screenshot%202024-01-24%20at%201.11.19%20PM.png)
+![app](./public/Screenshot%202024-01-24%20at%201.11.34%20PM.png)
+![app](./public/Screenshot%202024-01-24%20at%201.11.47%20PM.png)
 
 ### Technologies used:
 
