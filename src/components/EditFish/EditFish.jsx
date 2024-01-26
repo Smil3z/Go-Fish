@@ -162,7 +162,7 @@ function EditFish() {
                     <br />
                     <TextField value={caughtAt} onChange={(event) => 
                         setCaughtAt(event.target.value)} 
-                        label="Caught at" 
+                        label="Date" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
                         variant='filled'
