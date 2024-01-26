@@ -31,6 +31,31 @@ function EditFish() {
     const { id } = useParams();
     // const edit = useSelector(store => store.edit)
 
+    const onFileChange = async (event) => {
+        // Access the selected file
+        const fileToUpload = event.target.files[0];
+    
+        // Limit to specific file types.
+        const acceptedImageTypes = ['image/gif', 'image/jpeg', 'image/png', 'image/heic', 'image/heif'];
+    
+        // Check if the file is one of the allowed types.
+        if (acceptedImageTypes.includes(fileToUpload.type)) {
+          const formData = new FormData();
+          formData.append('file', fileToUpload);
+          formData.append('upload_preset', process.env.REACT_APP_PRESET);
+          let postUrl = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`;
+          axios.post(postUrl, formData).then(response => {
+            console.log('Success!', response);
+            setImageUrl(response.data.secure_url);
+          }).catch(error => {
+            console.log('error', error);
+            alert('Something went wrong');
+          })
+        } else {
+          alert('Please select an image');
+        }
+      }
+
     const editFish = (event) => {
         event.preventDefault();
         dispatch({ 
@@ -112,14 +137,15 @@ function EditFish() {
                         fullWidth
                     />
                     <br />
-                    <TextField value={imageUrl} onChange={(event) => 
-                        setImageUrl(event.target.value)} 
-                        label="Image url" 
+                    <TextField onChange={onFileChange} 
+                        type="file"
+                        accept="image/*"
+                        //label="Image url" 
                         id="outlined-start-adornment" 
                         sx={{ m: 1, width: '25ch' }}
-                        variant='filled'
                         InputProps={{ sx: { color: 'black', backgroundColor: 'white', '&.Mui-focused': { color: 'black', backgroundColor: 'white' } } }}
                         required
+                        variant='filled'
                         fullWidth
                     />
                     <br />
