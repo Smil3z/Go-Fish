@@ -36,7 +36,7 @@ function EditFish() {
         const fileToUpload = event.target.files[0];
     
         // Limit to specific file types.
-        const acceptedImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
+        const acceptedImageTypes = ['image/gif', 'image/jpeg', 'image/png', 'image/heic', 'image/heif'];
     
         // Check if the file is one of the allowed types.
         if (acceptedImageTypes.includes(fileToUpload.type)) {
